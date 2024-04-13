@@ -3,6 +3,7 @@ import pandas as pd
 import plotly
 import plotly.express as px
 import folium
+import openpyxl
 from folium.plugins import MarkerCluster
 import streamlit as st
 from PIL import Image
