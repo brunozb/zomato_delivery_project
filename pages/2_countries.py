@@ -1,6 +1,5 @@
 #---------------------------- Libraries ----------------------------------
 import pandas as pd
-import re
 import plotly
 import plotly.express as px
 import folium
