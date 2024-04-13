@@ -4,3 +4,4 @@ pandas==1.4.4
 folium==0.14.0
 streamlit-folium==0.15.0
 Pillow==9.2.0
+openpyxl==3.0.10
