@@ -18,11 +18,6 @@ st.set_page_config( page_title='Main Page',page_icon='📈', layout='wide' )
 
 #=========================================================================
 
-#Create the button to download DataBase
-def button_download():
-    download = df.to_excel('zomato.xlsx')
-    return download
-
 #Create the map with the points of the restaurants of the DataBase with theirs cards:
 def restaurants_map(df1):
   cols = ['Restaurant Name','Average Cost for two','Cuisines','Aggregate rating','City','Latitude', 'Longitude', 'Rating color']
@@ -181,8 +176,7 @@ countries_option = st.sidebar.multiselect(
 
 st.sidebar.markdown('## Press to download DataBase ##')
 
-if st.sidebar.button('Download',key='Download',use_container_width=False):
-    button_download()
+if st.sidebar.download_button(label='Download', data='dataset\zomato.xlsx', file_name='zomato.xlsx'):
     st.write('Download completed!')
 
 #Country filter
