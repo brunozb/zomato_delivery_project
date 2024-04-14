@@ -18,11 +18,6 @@ st.set_page_config(page_title='Countries',page_icon='📈',layout='wide')
 
 #=========================================================================
 
-#Create the button to download DataBase
-def button_download():
-    download = df.to_excel('zomato.xlsx')
-    return download
-
 #Create graphic - bars with Country Name:
 def graphic_avg(col2,title_):
     df1_aux=round(df1.loc[:,['Country Name',col2]].groupby('Country Name').mean().sort_values(by=col2,ascending=False).reset_index(),2)
@@ -155,8 +150,7 @@ countries_option = st.sidebar.multiselect(
 
 st.sidebar.markdown('## Press to download DataBase ##')
 
-if st.sidebar.button('Download',key='Download',use_container_width=False):
-    button_download()
+if st.sidebar.download_button(label='Download', data='dataset\zomato.xlsx', file_name='zomato.xlsx'):
     st.write('Download completed!')
 
 #Country filter
