@@ -150,7 +150,7 @@ countries_option = st.sidebar.multiselect(
 
 st.sidebar.markdown('## Press to download DataBase ##')
 
-if st.sidebar.download_button(label='Download', data='dataset\zomato.xlsx', file_name='zomato.xlsx'):
+if st.sidebar.download_button(label='Download', data='dataset\zomato.xlsx'):
     st.write('Download completed!')
 
 #Country filter
